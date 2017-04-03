@@ -10,9 +10,9 @@
 		header('Location: index.php');
 	}
 	
-	$p = isset($_GET['p']) ? $_GET['p'] : 'setting';
+	$p = isset($_GET['p']) ? $_GET['p'] : 'followers';
 	
-	$pages = array('setting', 'editor', 'emulator');
+	$pages = array('followers', 'editor', 'emulator','setting');
 	
 	require_once 'includes/config.php';
 	require_once 'includes/helper.php';
@@ -23,7 +23,8 @@
 <head>
 <title>Bot Framework - Dashboard</title>
 <link rel="stylesheet" href="assets/css/style.css">
-<script src="assets/js/jquery-3.2.0.min.js"></script>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+<meta content="utf-8" http-equiv="encoding">
 </head>
 <body>
 <div id="nav">
@@ -36,10 +37,11 @@
 			}
 		}
 	?>
-	<a href="logout.php">Logout</a>
+	<a href="command.php?a=logout">Logout</a>
 </div>
 <div id="content"><br/>
 	<?php include_once 'pages/' . $p . '.php'; ?>
+	
 </div>
 </body>
-</head>
+</html>

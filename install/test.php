@@ -3,5 +3,6 @@
 	$result['result'] = $link ? true : false;
 	$result['message'] = mysqli_connect_error();
 	if($link) mysqli_close($link);
+	
 	header("Content-type:application/json");
 	echo json_encode($result);

@@ -2,6 +2,26 @@ body{
 	padding: 0px;
 	margin: 0px;
 	font-family: "Verdana";
+	font-size: 12px;
+}
+
+table{
+	font-size: 12px;
+}
+
+th, td{
+	border-bottom: 1px solid #333;
+	padding: 4px;
+}
+
+.right{
+	float: right !important;
+}
+.dialog{
+	position: absolute;
+	border: 1px solid #333;
+	box-shadow: 6px 6px 6px #666;
+	background-color: #ddd;
 }
 
 #nav{
@@ -19,11 +39,19 @@ a:hover{
 }
 
 .error{
-	color: #e00;
+	color: #a00;
 }
 
 .success{
-	color: #0e0;
+	color: #0a0;
+}
+
+.msg{
+	padding: 8px;
+	background-color: #eef;
+	color: #003;
+	border: 1px solid #003;
+	font-size: 11px;
 }
 
 .box{
@@ -38,6 +66,18 @@ a:hover{
 	padding: 4px;
 	float: right;
 	font-size: 16px;
+	background-color: #5555ff;
+	color: #fff;
+	border: 1px solid #333;
+	cursor: pointer;
+}
+
+.left{
+	float: left !important;
+}
+
+.red{
+	background-color: #ff5555;
 }
 
 input[type=text],input[type=password],textarea, select{

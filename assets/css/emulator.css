@@ -1,0 +1,76 @@
+#btnSend{
+	margin-top: 4px; 
+	float: right; 
+	border: 1px solid #000;
+	cursor: pointer;
+}
+
+#txtMessage{
+	width: 259px; 
+	margin-top: 4px;
+}
+
+#container{
+	width: 300px; 
+	margin-left: auto; 
+	margin-right: auto;
+}
+
+#title{
+	padding: 8px;
+	width: 286px; 
+	font-weight: bold;
+	background-color: #d8dce4;
+}
+
+#messages{
+	width: 300px; 
+	height: 400px; 
+	background-color: #d8dce4;
+	border: 1px solid #333;
+	overflow: scroll;
+}
+
+.chat{
+	margin: 4px;
+	border-radius: 8px;
+	float: left;
+	color: #36435e;
+	background-color: #fff;
+	padding: 8px;
+	font-size: 12px;
+}
+
+.chat_ns{
+	margin: 4px;
+	text-align: center;
+	border-radius: 8px;
+	float: left;
+	color: #999;
+	background-color: #fff;
+	padding: 8px;
+	font-size: 12px;
+}
+
+.chat_error{
+	margin: 4px;
+	border-radius: 8px;
+	float: left;
+	color: #000;
+	background-color: #faa;
+	padding: 8px;
+	font-size: 11px;
+}
+
+.nl{
+	clear: both;
+}
+.chat_self{
+	margin: 4px;
+	border-radius: 8px;
+	float: right;
+	color: #fff;
+	background-color: #36435e;
+	padding: 8px;
+	font-size: 12px;
+}

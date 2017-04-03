@@ -29,41 +29,17 @@
 	foreach ($client->parseEvents() as $event) {
 		$source = $event['source'];
 		if($source['type'] == 'user'){
-			$profile = checkProfile($client, $source['userId']);
+			$profile = check_profile($client, $source['userId']);
 			$app = new $active_app($profile);
 			$messages = array();
 			if($event['type'] == 'follow'){
-				error_log('a:0');
-				$message = $app->onfollow();
-				if($message){
-					error_log('a:1');
-					$messages[] = array(
-						'type' => 'text',
-						'text' => $message
-					);
-				}
-				break;
+				$messages = process_messages($app->on_follow());
 			}else if($event['type'] == 'message'){
-				$message = $app->onmessage($event['message']['text']);
-				if($message){
-					$messages[] = array(
-						'type' => 'text',
-						'text' => $message
-					);
-				}
-				break;
+				$messages = process_messages($app->on_message($event['message']['text']));
 			}else if($event['type'] == 'postback'){
-				$message = $app->onpostback($event['postback']['data']);
-				if($message){
-					$messages[] = array(
-						'type' => 'text',
-						'text' => $message
-					);
-				}
-				break;
+				$messages = process_messages($app->on_postback($event['postback']['data']));
 			}else if($event['type'] == 'unfollow'){
-				$app->onunfollow();
-				break;
+				$app->on_unfollow();
 			}
 		}
 	}

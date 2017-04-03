@@ -23,19 +23,19 @@
 			$this->session->set('data', serialize($this->data));
 		}
 		
-		function onfollow(){
+		function on_follow(){
 			
 		}
 		
-		function onmessage($text){
+		function on_message($text){
 			
 		}
 		
-		function onpostback($data){
+		function on_postback($data){
 			
 		}
 		
-		function onunfollow(){
+		function on_unfollow(){
 			$db = new Database();
 			$db->query('UPDATE profiles SET `following` = 0 WHERE id = ' . $this->profile->id);
 			$db->close();

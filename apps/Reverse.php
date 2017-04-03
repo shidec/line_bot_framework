@@ -1,11 +1,11 @@
 <?php
 	class Reverse extends Line_Apps{
 				
-		function onfollow(){
-			return "Welcome {$this->profile->display_name}";
+		function on_follow(){
+			return "Welcome {$this->profile->display_name}.\nThis bot will respond with reversed words.";
 		}
 		
-		function onmessage($text){
+		function on_message($text){
 			return strrev($text);
 		}
 	}

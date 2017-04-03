@@ -14,7 +14,6 @@
 		  PRIMARY KEY (`id`),
 		  UNIQUE KEY `user_id` (`user_id`)
 		) ENGINE=InnoDB;');
-	#echo $db->error;
 	
 	$db->query('CREATE TABLE IF NOT EXISTS `options` (
 		  `id` int(10) NOT NULL AUTO_INCREMENT,
@@ -23,7 +22,6 @@
 		  PRIMARY KEY (`id`),
 		  UNIQUE KEY `option_name` (`option_name`)
 		) ENGINE=InnoDB;');
-	#echo $db->error;
 	
 	$db->query('INSERT INTO options (`option_name`,`option_value`) VALUES (\'base_url\', \'' . $_SESSION['server_url'] . '\')');
 	$db->query('INSERT INTO options (`option_name`,`option_value`) VALUES (\'channel_access_token\', \'' . $_SESSION['ch_token'] . '\')');
@@ -31,7 +29,7 @@
 	$db->query('INSERT INTO options (`option_name`,`option_value`) VALUES (\'admin_name\', \'' . $_SESSION['admin_name'] . '\')');
 	$db->query('INSERT INTO options (`option_name`,`option_value`) VALUES (\'admin_passwd\', \'' . md5($_SESSION['admin_passwd']) . '\')');
 	$db->query('INSERT INTO options (`option_name`,`option_value`) VALUES (\'active_app\', \'Reverse\')');
-	
+	$db->query('INSERT INTO profiles (`id`, `user_id`, `display_name`, `picture_url`) VALUES(1, \'U0000EMU\', \'Emulator\', \'\')');
 	$db->close();
 	$data = '<?php
 	
@@ -42,4 +40,6 @@
 ';
 	
 	file_put_contents('includes/config.php', $data);
+	
+	session_destroy();
 	header('Location: install.php');

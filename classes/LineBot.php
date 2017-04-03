@@ -121,7 +121,6 @@ class LineBot
     }
 	
 	function replyMessage($message){
-		error_log("replyMessage:" . json_encode($message));
     	$header = array(
             "Content-Type: application/json",
             'Authorization: Bearer ' . $this->channelAccessToken,

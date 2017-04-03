@@ -3,7 +3,8 @@
 		$link = @mysqli_connect($_POST['db_host'], $_POST['db_user'], $_POST['db_passwd'], $_POST['db_database']);
 		if($link){
 			mysqli_close($link);
-			$_SESSION['server_url'] = trim(strtolower($_POST['server_url']));
+			$server_url = trim($_POST['server_url']);
+			$_SESSION['server_url'] = substr($server_url, -1, 1) === '/' ? $server_url : $server_url . '/';
 			$_SESSION['db_host'] = $_POST['db_host'];
 			$_SESSION['db_user'] = $_POST['db_user'];
 			$_SESSION['db_passwd'] = $_POST['db_passwd'];
