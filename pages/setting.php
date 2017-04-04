@@ -3,7 +3,7 @@
 	$files = scandir('./apps');
 	$apps = array();
 	foreach($files as $f){
-		if($f != '.' && $f != '..'){
+		if(substr($f, 0, 1) != '.'){
 			$f = substr($f, 0, strripos($f, '.'));
 			$apps[$f] = $f;
 		}
