@@ -93,18 +93,7 @@
 			return false;
 		});
 	}
-</script>
-<?php
-	
-	$files = scandir('./apps');
-	$apps = array();
-	foreach($files as $f){
-		if($f != '.' && $f != '..'){
-			$f = substr($f, 0, strripos($f, '.'));
-			$apps[$f] = $f;
-		}
-	}
-?><br/><br/>
+</script><br/><br/>
 <div align="center">
 <table width="500">
 	<tr>
@@ -116,8 +105,9 @@
 		</td>
 	</tr>
 	<?php
+		$files = scandir('./apps');
 		foreach($files as $f){
-			if($f != '.' && $f != '..'){
+			if(substr($f, 0, 1) != '.'){
 				$f = substr($f, 0, strripos($f, '.'));
 	?>
 	<tr>
