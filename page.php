@@ -21,7 +21,7 @@
 ?>
 <html>
 <head>
-<title>Bot Framework - Dashboard</title>
+<title>Bot Framework - <?php echo ucfirst($p); ?></title>
 <link rel="stylesheet" href="assets/css/style.css">
 <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
 <meta content="utf-8" http-equiv="encoding">

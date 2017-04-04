@@ -31,10 +31,18 @@
 <script src="assets/js/jquery-3.2.0.min.js"></script>
 </head>
 <body>
-<br/><br/><br/><br/><br/>
+<br/><br/>
+<?php
+	if(isset($_GET['installed'])){
+?>
+<div class="msg">instalation complete. It's better to remove 'install' directory.</div>
+<?php		
+	}
+?>
+<br/><br/><br/>
 <div align="center">
 	<?php echo (isset($error) ? '<div class="error">' . $error . '</div>' : ''); ?><br/>
-	<form name="formLogin" id="formLogin" method="post" action="">
+	<form name="formLogin" id="formLogin" method="post" action="index.php">
 	<table width="400">
 		<tr>
 			<td>Username</td>

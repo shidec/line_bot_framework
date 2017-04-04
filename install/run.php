@@ -41,5 +41,12 @@
 	
 	file_put_contents('includes/config.php', $data);
 	
+	$files = scandir('./install/apps');
+	foreach($files as $f){
+		if($f != '.' && $f != '..'){
+			copy('./install/apps/' . $f, './apps/' . $f);
+		}
+	}
+	
 	session_destroy();
-	header('Location: install.php');
+	header('Location: install.php?installed=1');

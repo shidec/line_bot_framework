@@ -25,7 +25,7 @@
 
 #messages{
 	width: 300px; 
-	height: 400px; 
+	height: 380px; 
 	background-color: #d8dce4;
 	border: 1px solid #333;
 	overflow: scroll;
@@ -60,6 +60,20 @@
 	background-color: #faa;
 	padding: 8px;
 	font-size: 11px;
+}
+.chat_title{
+	font-weight: bold;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	border-bottom: 1px solid #999;
+}
+
+.chat_button{
+	padding-top: 4px;
+	padding-bottom: 4px;
+	text-align: center;
+	cursor: pointer;
+	float: left;
 }
 
 .nl{
