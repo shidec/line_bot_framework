@@ -1,5 +1,5 @@
 # LINE Bot Framework
-Framework to create bot for Line Messenger
+Framework to create bot for LINE Messenger
 
 Features:
 - Installation Wizard

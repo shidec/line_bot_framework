@@ -19,9 +19,9 @@
 <br/>
 <div class="msg">
 <ul>
-<li>Fill it with Channel Secret &amp; Token you got from Line Messaging API.</li>
+<li>Fill it with Channel Secret &amp; Token you got from LINE Messaging API.</li>
 <li>You can skip this step and fill it later in Setting Page.</li>
-<li>Read about Line Messaging API <a href="https://developers.line.me/messaging-api/getting-started">here</a>.</li>
+<li>Read about LINE Messaging API <a href="https://developers.line.me/messaging-api/getting-started">here</a>.</li>
 </ul>
 </div>
 <form name="formSecret" id="formSecret" method="post">
