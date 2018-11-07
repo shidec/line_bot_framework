@@ -27,7 +27,7 @@
 				if(data != null && data.result){
 					$('#formDatabase').submit();
 				}else{
-					alert('Error: ' + data.message);
+					alert('Database Error: ' + data.message);
 				}
 			});
 		});
