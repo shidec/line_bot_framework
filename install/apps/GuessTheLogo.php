@@ -12,9 +12,9 @@
 			return $messages;
 		}
 		
-		function on_message($text){
+		function on_message($message){
 			//--mq_status 0: none, 1: play
-			$text = strtolower($text);
+			$text = strtolower($message['text']);
 			if($text == 'play'){				
 				$messages = $this->generateQuestion();
 			}else{

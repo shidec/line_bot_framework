@@ -5,7 +5,7 @@
 			return "Hi!";
 		}
 		
-		function on_message($text){
-			return "Echo: " . $text;
+		function on_message($message){
+			return "Echo: " . $message['text'];
 		}
 	}

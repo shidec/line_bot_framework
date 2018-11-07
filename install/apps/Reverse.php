@@ -5,7 +5,7 @@
 			return "Welcome {$this->profile->display_name}.\nThis bot will respond with reversed words.";
 		}
 		
-		function on_message($text){
-			return strrev($text);
+		function on_message($message){
+			return strrev($message['text']);
 		}
 	}

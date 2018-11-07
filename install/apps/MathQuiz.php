@@ -15,9 +15,9 @@
 			return $messages;
 		}
 		
-		function on_message($text){
+		function on_message($message){
 			//--mq_status 0: none, 1: play
-			$text = strtolower($text);
+			$text = strtolower($message['text']);
 			if($this->session->get('mq_status') == 0 && $text == 'start'){
 				$this->session->set('mq_status', 1);
 				$this->session->set('mq_start_time', time());

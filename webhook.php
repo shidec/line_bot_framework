@@ -21,21 +21,21 @@
 	
 	$option = new Option();
 	$active_app = $option->get('active_app');
-	$client = new LineBot($option->get('channel_access_token'), $option->get('channel_secret'));
+	$bot = new LineBot($option->get('channel_access_token'), $option->get('channel_secret'));
 	
 	require_once './apps/' . $active_app  . '.php';
 	
 	
-	foreach ($client->parseEvents() as $event) {
+	foreach ($bot->parseEvents() as $event) {
 		$source = $event['source'];
 		if($source['type'] == 'user'){
-			$profile = check_profile($client, $source['userId']);
-			$app = new $active_app($profile);
+			$profile = check_profile($bot, $source['userId']);
+			$app = new $active_app($profile, $bot);
 			$messages = array();
 			if($event['type'] == 'follow'){
 				$messages = process_messages($app->on_follow());
 			}else if($event['type'] == 'message'){
-				$messages = process_messages($app->on_message($event['message']['text']));
+				$messages = process_messages($app->on_message($event['message']));
 			}else if($event['type'] == 'postback'){
 				$messages = process_messages($app->on_postback($event['postback']['data']));
 			}else if($event['type'] == 'unfollow'){
@@ -45,7 +45,7 @@
 	}
 				
 	if($messages){
-		$client->replyMessage(array(
+		$bot->replyMessage(array(
 			'replyToken' => $event['replyToken'],
 			'messages' => $messages
 		));

@@ -9,7 +9,7 @@
 			return $messages;
 		}
 		
-		function on_message($text){
+		function on_message($message){
 			//--please dont fix this error
 			$messages = 'I\'m invisible :)';
 			return $message;

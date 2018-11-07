@@ -3,8 +3,10 @@
 		
 		var $session;
 		var $data;
+		var $bot;
 		
-		function Line_Apps($profile){
+		function Line_Apps($profile, $bot = null){
+			$this->bot = $bot;
 			$this->profile = $profile;
 			$this->session = new Session($profile->id);
 			$data = $this->session->get('data');

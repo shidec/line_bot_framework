@@ -119,6 +119,41 @@ class LineBot
 			}
 		}
     }
+
+    function pushMessage($uid, $messages){
+        error_log("pushMessage");
+        $header = array(
+            "Content-Type: application/json",
+            'Authorization: Bearer ' . $this->channelAccessToken,
+        );
+    
+        $post = array('to' => $uid, 'messages' => $messages);
+        
+        error_log(json_encode($post));
+        $ch   = curl_init('https://api.line.me/v2/bot/message/push');
+        curl_setopt($ch, CURLOPT_POST, true);
+        curl_setopt($ch, CURLOPT_POSTFIELDS,json_encode($post));
+        curl_setopt($ch, CURLOPT_FOLLOWLOCATION, false);
+        curl_setopt($ch, CURLOPT_HTTPHEADER, $header);
+        curl_setopt($ch, CURLOPT_HEADER, true);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+        curl_setopt($ch, CURLOPT_TIMEOUT, 30);
+        $response = curl_exec($ch);
+        error_log("Push: " . $response);
+        if($response === false){
+            error_log("Error: connection");
+        }else{
+            $header_size = curl_getinfo($ch, CURLINFO_HEADER_SIZE);
+            $header = substr($response, 0, $header_size);
+            $body = substr($response, $header_size);
+            if($body){
+                return json_decode($body);
+            }else{
+                error_log("Error: " . $header);
+            }
+        }
+    }
 	
 	function replyMessage($message){
     	$header = array(
