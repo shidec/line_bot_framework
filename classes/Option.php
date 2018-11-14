@@ -3,7 +3,8 @@
 	class Option{
 		
 		var $data;
-		function Option(){
+		
+		public function __construct(){
 			$this->read();
 		}
 		

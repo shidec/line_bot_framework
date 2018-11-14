@@ -1,7 +1,8 @@
 <?php
 
 class Database{	
-	function Database(){
+	
+	public function __construct(){
 		$this->mysqli = mysqli_connect(DB_HOST, DB_USER, DB_PASSWD, DB_DATABASE);
 	}
 	

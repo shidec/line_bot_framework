@@ -38,7 +38,7 @@
 				if($event['type'] == 'follow'){
 					$messages = process_messages($app->on_follow());
 				}else if($event['type'] == 'message'){
-					$messages = process_messages($app->on_message($event['message']['text']));
+					$messages = process_messages($app->on_message($event['message']));
 				}else if($event['type'] == 'postback'){
 					$messages = process_messages($app->on_postback($event['postback']['data']));
 				}else if($event['type'] == 'unfollow'){

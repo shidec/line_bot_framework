@@ -4,7 +4,7 @@
 		var $sessionId;
 		var $data;
 		
-		function Session($id){
+		public function __construct($id){
 			$this->sessionId = $id;
 			$this->read();
 		}

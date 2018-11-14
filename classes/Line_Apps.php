@@ -5,7 +5,7 @@
 		var $data;
 		var $bot;
 		
-		function Line_Apps($profile, $bot = null){
+		public function __construct($profile, $bot = null){
 			$this->bot = $bot;
 			$this->profile = $profile;
 			$this->session = new Session($profile->id);
@@ -29,7 +29,7 @@
 			
 		}
 		
-		function on_message($text){
+		function on_message($message){
 			
 		}
 		
