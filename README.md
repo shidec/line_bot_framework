@@ -1,8 +1,11 @@
 # LINE Bot Framework
 Framework to create bot for LINE Messenger
 
-version 0.7.1
-Whats new:
+# Release notes
+v. 0.7.2
+- Bug fixed issue #2 
+
+v. 0.7.1
 - update on_message now receive all message body, not only text 
 
 Features:
