@@ -1,7 +1,7 @@
 <?php
 	class GuessTheLogo extends Line_Apps{
 		
-		var $image_url = 'http://localhost/lbf/samples/';
+		var $image_url = 'http://localhost/lbf/samples/' ;
 
 		function on_follow(){
 			$messages = array("Welcomes {$this->profile->display_name}.",

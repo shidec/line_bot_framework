@@ -4,7 +4,7 @@ Framework to create bot for LINE Messenger
 # Release notes
 v. 0.7.2
 - Bug fixed issue #2 
-- Add $image_url on GuestTheLogo.php for clearer configuration
+- Add $image_url on GuestTheLogo.php for clearer configuration 
 
 v. 0.7.1
 - update on_message now receive all message body, not only text 
