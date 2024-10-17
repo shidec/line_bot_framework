@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="assets/css/emulator.css">
-<script src="assets/js/jquery-3.2.0.min.js"></script>
+<script src="assets/js/jquery-3.7.1.min.js"></script>
 <script type="application/javascript">
 	$(document).ready(function(){
 

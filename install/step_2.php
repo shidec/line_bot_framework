@@ -19,7 +19,7 @@
 <head>
 <title>Installation - Step 2. Server &amp; Database</title>
 <link rel="stylesheet" href="assets/css/style.css">
-<script src="assets/js/jquery-3.2.0.min.js"></script>
+<script src="assets/js/jquery-3.7.1.min.js"></script>
 <script language="javascript">
 	$(document).ready(function(){
 		$('#btnNext').click(function(){

@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="assets/css/style.css">
 <link rel="stylesheet" href="assets/css/codemirror.css">
-<script src="assets/js/jquery-3.2.0.min.js"></script>
+<script src="assets/js/jquery-3.7.1.min.js"></script>
 <script src="assets/js/codemirror/codemirror.js"></script>
 <script src="assets/js/codemirror/php.js"></script>
 <script src="assets/js/codemirror/matchbrackets.js"></script>
