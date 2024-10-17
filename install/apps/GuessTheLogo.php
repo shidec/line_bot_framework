@@ -1,7 +1,5 @@
 <?php
 	class GuessTheLogo extends Line_Apps{
-		
-		var $image_url = 'http://localhost/lbf/samples/' ;
 
 		function on_follow(){
 			$messages = array("Welcomes {$this->profile->display_name}.",
@@ -58,7 +56,10 @@
 			return $messages;
 		}
 		
-		private function generateQuestion(){			
+		private function generateQuestion(){	
+			$option = new Option();		
+			$image_url = $option->get('base_url') .  'samples/';
+
 			//--sample questions, you can load it from database
 			$questions = array(
 					array('name' => 'chevrolet', 'logo' => 'chevrolet.png'),
@@ -79,8 +80,8 @@
 			
 			return array(
 							'type' => 'image',
-							'originalContentUrl' => $this->image_url . $questions[$index]['logo'],
-							'previewImageUrl' => $this->image_url . $questions[$index]['logo']
+							'originalContentUrl' => $image_url . $questions[$index]['logo'],
+							'previewImageUrl' => $image_url . $questions[$index]['logo']
 						);
 		}
 		

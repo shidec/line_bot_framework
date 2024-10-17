@@ -5,11 +5,7 @@
 			$messages = array("Welcomes {$this->profile->display_name}.",
 							  "Let's play Math Quiz. Answer math question within a minute.",
 							  "Type 'start' to play.");
-			$messages[] = array(
-								'type' => 'image',
-								'originalContentUrl' => 'http://localhost/git/line_bot_framework/samples/affa.jpg',
-								'previewImageUrl' => 'http://localhost/git/line_bot_framework/samples/affa.jpg'
-							);
+
 			$this->session->set('mq_status', 0);
 			
 			return $messages;
@@ -61,6 +57,7 @@
 		private function generateQuestion(){
 			$ops = array(' * ',' + ',' - ');
 			$q = rand(5,20) . $ops[rand(0,2)] . rand(5, 20);
+			$a = '';
 			eval('$a = ' . $q . ';');
 			
 			$this->session->set('mq_question', $q);

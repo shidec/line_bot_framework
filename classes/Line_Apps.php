@@ -1,9 +1,10 @@
 <?php
 	class Line_Apps{
 		
-		var $session;
-		var $data;
-		var $bot;
+		public $session;
+		public $data;
+		public $bot;
+		public $profile;
 		
 		public function __construct($profile, $bot = null){
 			$this->bot = $bot;

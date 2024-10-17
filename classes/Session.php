@@ -1,8 +1,8 @@
 <?php
 
 	class Session{		
-		var $sessionId;
-		var $data;
+		public $sessionId;
+		public $data;
 		
 		public function __construct($id){
 			$this->sessionId = $id;

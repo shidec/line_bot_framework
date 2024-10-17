@@ -2,7 +2,7 @@
 
 	class Option{
 		
-		var $data;
+		public $data;
 		
 		public function __construct(){
 			$this->read();

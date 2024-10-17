@@ -12,7 +12,7 @@
 		function on_message($message){
 			//--please dont fix this error
 			$messages = 'I\'m invisible :)';
-			return $message;
+			return $messag;
 		}
 		
 		function on_postback($data){

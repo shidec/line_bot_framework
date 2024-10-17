@@ -53,6 +53,9 @@ if (!function_exists('hash_equals')) {
 
 class LineBot
 {
+    public $channelAccessToken;
+    public $channelSecret;
+    
     public function __construct($channelAccessToken, $channelSecret)
     {
         $this->channelAccessToken = $channelAccessToken;
