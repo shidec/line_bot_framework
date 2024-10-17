@@ -2,6 +2,10 @@
 Framework to create bot for LINE Messenger
 
 # Release notes
+v. 0.8.1
+- Support PHP 8, tested on PHP 8.2 
+- Upgrade jquery 3.2.0 => jquery 3.7.1 
+  
 v. 0.7.2
 - Bug fixed issue #2 
 - Add $image_url on GuestTheLogo.php for clearer configuration 
